@@ -1,0 +1,172 @@
+<hmtl>
+	<head>
+		<meta charset="utf-8">
+		<title>Penn Projects</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A showcase for cool projects from the geeks at University of Pennsylvania.">
+		<meta name="author" content="Ian Sibner">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#" style ="font-size : 22px">Penn Projects</a>
+					<div class="nav-collapse collapse">
+					<ul class="nav">
+					  <li class="active"><a href="#">Home</a></li>
+					  <li><a href="/about">About DinPhil</a></li>
+					  <li><a href="/submit">Submit a Project</a></li>
+					</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+	
+
+	<!-- This is exactly like the penn-projects website. Each sponsor in the list will have a URL, an image URL, and a name. Loop over them to get them to show up. -->
+	<div id="picture_tiles">		
+			
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.rememberwhenracing.com/images/BeCoolLogo.jpg"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.optionsmusicfestival.org/wp-content/uploads/2012/10/red-bull-logo.jpg"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://upload.wikimedia.org/wikipedia/commons/4/47/Earth-Week-logo.jpg"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.dsm.com/en_US/cworld/public/media/images/DSM_SimplifiedLogo_FullColor.png"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.bintaandemmanuel.com/wp-content/uploads/2011/05/Target-Logo.jpg"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://creativebits.org/files/500px-Apple_Computer_Logo.svg_.png"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.vectortemplates.com/raster/batman-logo-big.gif"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://upload.wikimedia.org/wikipedia/commons/1/1a/Volkswagen_Logo.png"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.rememberwhenracing.com/images/BeCoolLogo.jpg"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+
+				<a href = "link to sponsor's website">
+					<div class="tile">
+						
+						<img src="http://www.rememberwhenracing.com/images/BeCoolLogo.jpg"> <!--must be changed to cover photo reference-->						
+						<div class="caption">
+							<h5>Be Cool</h5>
+						</div>
+					</div>
+				</a>
+		
+		
+	</div>
+
+	<div class="navbar navbar-fixed-bottom">
+		<div class="navbar-inner no-shadow">
+			<div class="container-fluid">
+				<span class="brand" id="footer">Created by <a href="http://www.tomshen.me/">Tom Shen</a> &amp; Ian Sibner</span>				
+			</div>
+		</div>
+	</div>
+
+
+		<script src="http://code.jquery.com/jquery-latest.js"> </script>
+		<script src="bootstrap/js/bootstrap.min.js"> </script>
+		<script src="bootstrap/js/jquery.masonry.js"> </script>
+		<script type="text/javascript">
+		$().ready(function(){
+			var $container = $('#picture_tiles');
+			$container.imagesLoaded(function(){
+			  $container.masonry({
+				itemSelector : '.tile',
+				isAnimated: true,
+				 animationOptions: {
+					duration: 550,
+					queue: true
+				  },
+				columnWidth: function( containerWidth ) {
+					return containerWidth / 4;
+				  }
+			  });
+			});
+		});
+		</script>
+	</body>
+</html>
