@@ -1,0 +1,4 @@
+venv
+*.pyc
+TEST.sql
+secret.py

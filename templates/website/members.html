@@ -1,0 +1,115 @@
+<hmtl>
+	<head>
+		<meta charset="utf-8">
+		<title>Zimbabwe Debate - Members</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="Ian Sibner">
+		<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="/static/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="/">Zimbabwe Debate</a>
+					<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="/">Home</a>
+						</li>
+						<li class="">
+							<a href="/about">About</a>
+						</li>
+						<li class="">
+							<a href="/sponsors">Sponsors</a>
+						</li>
+						<li class="active">
+							<a href="/members">Members</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+
+	      <!-- This will be replaced with an indexed for loop over the members list -->
+	      <!-- Each member will get a span6 with their bio & photo. Every two members will have their own row-fluid -->
+	      <!-- If the total number of members is odd, another </div> for the last row-fluid will be added to the end. -->
+	      <div class="row-fluid">
+	      	<div class="span6">
+	      		<img src="http://www.netdirectories.com/~hgs/linkphoto/debi_o.jpg" style="float:left; width:25%; margin-left:2%">
+	      		<p style="float:left; width:60%; margin-left:3%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      	</div>
+	      	<div class="span6">
+	      		<img src="http://www.prosbo.com/images/prosbo_hires.jpg" style="float:left; width:25%; margin-left:2%">
+	      		<p style="float:left; width:60%; margin-left:3%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      	</div>
+	      </div> <!--row-fluid-->
+
+	      <div class="row-fluid">
+	      	<div class="span6">
+	      		<img src="http://www.netdirectories.com/~hgs/linkphoto/debi_o.jpg" style="float:left; width:25%; margin-left:2%">
+	      		<p style="float:left; width:60%; margin-left:3%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      	</div>
+	      </div> <!--row-fluid-->
+	     </div><!-- container-fluid -->
+
+
+		<script src="http://code.jquery.com/jquery-latest.js"> </script>
+   	 	<script src="/static/bootstrap/js/bootstrap.min.js"> </script>
+   	 	<script type="text/javascript">
+
+	   	 	$().ready(function(){
+	   	 		var allRowFluids = $('.row-fluid');
+	   	 		allRowFluids.css("margin-bottom", 20);
+	   	 		allRowFluids.each(function(){
+	   	 			var height = $(this).outerHeight(true);
+	   	 			height = Math.max(height, 300); // Spans can't be less than 300px tall
+	   	 			//console.log(height);
+	   	 			var children = $(this).children('.span6');
+	   	 			//console.log(children);
+	   	 			children.css("height", height);
+	   	 			var images = children.find('img');
+	   	 			console.log(images);
+	   	 			images.css("max-height", (height-40));
+	   	 			images.css("min-height", (height-40));
+	   	 		});
+	   	 	});
+   	 	</script>
+	</body>
+</html>
