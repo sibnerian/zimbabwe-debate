@@ -1,6 +1,6 @@
 # Zimbabwe Debate Website
 
-Source code behind [zimbabwe-debate.herokuapp.com](zimbabwe-debate.herokuapp.com)
+Source code behind [zimbabwe-debate.herokuapp.com](http://zimbabwe-debate.herokuapp.com)
 
 ## To Do
 
