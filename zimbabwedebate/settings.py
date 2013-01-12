@@ -154,5 +154,5 @@ LOGGING = {
 }
 
 # Comment out the following two lines for testing. Uncomment before deploying
-#import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
