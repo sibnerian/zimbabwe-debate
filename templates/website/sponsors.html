@@ -43,109 +43,27 @@
 	
 
 	<!-- This is exactly like the penn-projects website. Each sponsor in the list will have a URL, an image URL, and a name. Loop over them to get them to show up. -->
-	<div id="picture_tiles">		
-			
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.rememberwhenracing.com/images/BeCoolLogo.jpg"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
+	<div id="picture_tiles">
+		{% for sponsor in sponsors %}
+			<a href = "{{ sponsor.url }}">
+				<div class="tile">
+					<img src="{{ sponsor.image_url }}"> <!--must be changed to cover photo reference-->						
+					<div class="caption">
+						<h5>{{ sponsor.name }}</h5>
 					</div>
-				</a>
+				</div>
+			</a>
 
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.optionsmusicfestival.org/wp-content/uploads/2012/10/red-bull-logo.jpg"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://upload.wikimedia.org/wikipedia/commons/4/47/Earth-Week-logo.jpg"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.dsm.com/en_US/cworld/public/media/images/DSM_SimplifiedLogo_FullColor.png"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.bintaandemmanuel.com/wp-content/uploads/2011/05/Target-Logo.jpg"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://creativebits.org/files/500px-Apple_Computer_Logo.svg_.png"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.vectortemplates.com/raster/batman-logo-big.gif"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://upload.wikimedia.org/wikipedia/commons/1/1a/Volkswagen_Logo.png"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.rememberwhenracing.com/images/BeCoolLogo.jpg"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
-
-				<a href = "link to sponsor's website">
-					<div class="tile">
-						
-						<img src="http://www.rememberwhenracing.com/images/BeCoolLogo.jpg"> <!--must be changed to cover photo reference-->						
-						<div class="caption">
-							<h5>Be Cool</h5>
-						</div>
-					</div>
-				</a>
+		{% endfor %}			
 		
-		
+	</div>
+
+	<div class="navbar navbar-fixed-bottom">
+		<div class="navbar-inner no-shadow">
+			<div class="container-fluid">
+				<span class="brand" id="footer">Created by <a href="http://www.tomshen.me/">Tom Shen</a> &amp; Ian Sibner</span>				
+			</div>
+		</div>
 	</div>
 
 	<div class="navbar navbar-fixed-bottom">

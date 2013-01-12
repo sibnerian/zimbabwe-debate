@@ -45,49 +45,32 @@
 	      <!-- This will be replaced with an indexed for loop over the members list -->
 	      <!-- Each member will get a span6 with their bio & photo. Every two members will have their own row-fluid -->
 	      <!-- If the total number of members is odd, another </div> for the last row-fluid will be added to the end. -->
-	      <div class="row-fluid">
-	      	<div class="span6">
-	      		<img src="http://www.netdirectories.com/~hgs/linkphoto/debi_o.jpg" style="float:left; width:25%; margin-left:2%">
-	      		<p style="float:left; width:60%; margin-left:3%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	      	</div>
-	      	<div class="span6">
-	      		<img src="http://www.prosbo.com/images/prosbo_hires.jpg" style="float:left; width:25%; margin-left:2%">
-	      		<p style="float:left; width:60%; margin-left:3%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	      	</div>
-	      </div> <!--row-fluid-->
-
-	      <div class="row-fluid">
-	      	<div class="span6">
-	      		<img src="http://www.netdirectories.com/~hgs/linkphoto/debi_o.jpg" style="float:left; width:25%; margin-left:2%">
-	      		<p style="float:left; width:60%; margin-left:3%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	      	</div>
-	      </div> <!--row-fluid-->
+	      {% for member in members %}
+	      	{% if not forloop.counter|divisibleby:"2" %}
+	      		<div class="row-fluid">
+	      	{% endif %}
+		      	<div class="span6">
+		      		<img src="{{ member.image_url }}" style="float:left; width:25%; margin-left:2%">
+		      		<p style="float:left; width:60%; margin-left:3%"><strong>{{ member.name }}<br></strong>{{ member.bio }}</p>
+		      	</div>
+	      	{% if forloop.counter|divisibleby:"2" %}
+	      		</div> <!--row-fluid-->
+	      	{% endif %}
+	      {% endfor %}
+	      {% if not members|length|divisibleby:"2" %}
+	      	</div><!--row-fluid-->
+	      {% endif %}
+	      
 	     </div><!-- container-fluid -->
+
+	     <div class="navbar navbar-fixed-bottom">
+			<div class="navbar-inner no-shadow">
+				<div class="container-fluid">
+					<span class="brand" id="footer">Created by <a href="http://www.tomshen.me/">Tom Shen</a> &amp; Ian Sibner</span>				
+				</div>
+			</div>
+		</div>
+
 
 
 		<script src="http://code.jquery.com/jquery-latest.js"> </script>
@@ -105,9 +88,9 @@
 	   	 			//console.log(children);
 	   	 			children.css("height", height);
 	   	 			var images = children.find('img');
-	   	 			console.log(images);
+	   	 			//console.log(images);
 	   	 			images.css("max-height", (height-40));
-	   	 			images.css("min-height", (height-40));
+	   	 			//images.css("min-height", (height-40));
 	   	 		});
 	   	 	});
    	 	</script>

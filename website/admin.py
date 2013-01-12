@@ -3,9 +3,9 @@ from django.contrib import admin
 
 class MemberAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,              {'fields':['name', 'bio']}),
+        (None,              {'fields':['name', 'bio', 'image_url']}),
     ]
-    list_display = ('name', 'bio')
+    list_display = ('name', 'bio', 'image_url')
     list_filter = ['name']
     search_fields = ['name']
 

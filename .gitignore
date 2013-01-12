@@ -2,3 +2,5 @@ venv
 *.pyc
 TEST.sql
 secret.py
+submitfiles
+submit.bat
