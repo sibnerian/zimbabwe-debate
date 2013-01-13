@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response
 # from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template import Context, loader
 from django.http import HttpResponse
-from website.models import Member, Sponsor
+from zimbabwe_debate_website.models import Member, Sponsor
 
 def index(request):
     return render_to_response('website/index.html')

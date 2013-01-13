@@ -1,4 +1,4 @@
-from website.models import Member, Sponsor
+from zimbabwe_debate_website.models import Member, Sponsor
 from django.contrib import admin
 
 class MemberAdmin(admin.ModelAdmin):
